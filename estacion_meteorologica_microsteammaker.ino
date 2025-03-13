@@ -266,7 +266,7 @@ void setup()
 		fnc_sd_print_esp32ks(String("app.log"),String(String("No se han podido leer datos de app")),true);
 	}
 
-	n = String(s_frecuencia).toFloat();
+	n = 10000;
 
 }
 
@@ -319,6 +319,7 @@ void loop()
   				Serial.println(s_respuesta);
   				fnc_sd_print_esp32ks(String("app.log"),String(s_respuesta),true);
   				n = String(s_frecuencia).toFloat();
+  				fnc_sd_print_esp32ks(String("app.log"),String(String("Se volverá a leer en la frecuencia establecida")),true);
   			}
   			else {
   				fnc_sd_print_esp32ks(String("app.log"),String(String("No nos llega la hora. Hacemos que se ejecute en 1 minuto")),true);
